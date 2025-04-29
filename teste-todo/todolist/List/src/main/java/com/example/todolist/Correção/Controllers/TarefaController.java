@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/task")
+@RequestMapping("/Tarefa")
 public class TarefaController {
 
     @Autowired
     TarefasService Tservice;
 
-    @PostMapping("/new")
+    @PostMapping("/Novo")
     public ResponseEntity<TarefasDTO> inserirTarefa(@RequestBody @Valid TarefasDTO dto){
     dto = Tservice.novaTarefa(dto);
     return ResponseEntity.ok(dto);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/Tudo")
     public List<TarefasDTO> listarTarefas(){
        return Tservice.listarTarefas();
     }
