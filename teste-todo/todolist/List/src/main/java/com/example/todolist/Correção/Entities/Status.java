@@ -6,5 +6,4 @@ public enum Status {
     FAZENDO,
     PRONTO
 
-    //Enum para definir os estados da tarefas
 }
